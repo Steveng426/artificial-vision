@@ -48,9 +48,10 @@ maximoB = np.max(img2) #Máximo
 promB = np.mean(img2) #Promedio
 varB = np.var(img2) #Varianza
 deB = np.sqrt(var) #Desviación estándar
-
-# ::::::  formato Binario ::::::
-umbralA,_ = cv2.threshold(I,0,255,cv2.THRESH_OTSU)
+ARGmaximo  =  np . argmax (img1)
+ARGmin  =  np . argmin (img1)
+ARGmaximo  =  np . argmax (img2)
+ARGmin  =  np . argmin (img2)umbralA,_ = cv2.threshold(I,0,255,cv2.THRESH_OTSU)
 binaria = np.uint8((I<umbralA)+255)
 cv2.imshow('Img-Binary', binaria)
 
